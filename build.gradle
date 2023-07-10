@@ -58,16 +58,34 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
+task local_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("local")
+    }
+}
 
-task simple_test(type: Test) {
+task remote_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("remote")
+    }
+}
+
+
+task mainPage_test(type: Test) {
     useJUnitPlatform{
         includeTags("Main_Page")
     }
 }
 
-task remote_test(type: Test) {
+task checkPresence_test(type: Test) {
     useJUnitPlatform {
         includeTags("Check_presence")
+    }
+}
+
+task doctors_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Doctors")
     }
 }
 

@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.sberhealth.helpers.Attach;
-import ru.sberhealth.pages.MainPageHeader;
+import ru.sberhealth.pages.HealthPage;
 
 import java.util.Map;
 
@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
-    MainPageHeader mainPageHeader = new MainPageHeader();
+    HealthPage healthPage = new HealthPage();
 
     @BeforeAll
     static void beforeAll() {
