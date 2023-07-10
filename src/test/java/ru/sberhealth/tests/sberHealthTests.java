@@ -11,10 +11,10 @@ public class sberHealthTests extends TestBase{
     @Test
     @Tag("Main_Page")
     @Tag("Check_presence")
-    @DisplayName("Check 'СберЗдоровье' logo presence")
+    @DisplayName("Check header links presence")
     void checkLogo() {
         mainPageHeader.openMainPage()
-                        .checkLogo();
+                        .checkHeaderLinks();
 
 
 

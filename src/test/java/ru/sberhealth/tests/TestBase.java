@@ -24,9 +24,10 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = System.getProperty("screenResolution","1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl","https://sberhealth.ru/");
-        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+//        Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
+        Configuration.holdBrowserOpen = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
