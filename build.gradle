@@ -58,34 +58,27 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-task local_test(type: Test) {
-    useJUnitPlatform{
-        includeTags("local")
-    }
-}
-
-task remote_test(type: Test) {
-    useJUnitPlatform{
-        includeTags("remote")
-    }
-}
-
-
-task mainPage_test(type: Test) {
-    useJUnitPlatform{
-        includeTags("Main_Page")
-    }
-}
-
-task checkPresence_test(type: Test) {
+task main_page_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Check_presence")
+        includeTags("main_page")
     }
 }
 
-task doctors_test(type: Test) {
+task search_doctor_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Doctors")
+        includeTags("doctors")
     }
+}
+
+task urgent_consultation_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("consultation")
+    }
+}
+
+task diagnostics_search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("diagnostics")
+        }
 }
 
