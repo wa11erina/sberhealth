@@ -9,6 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class OnlineConsultationTests extends TestBase {
 
     @Test
+    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check presence of 'Срочные консультации (Терапевт, педиатр, ветеринар)' on 'Онлайн-консультации' page")
     void checkUrgentLinks() {
@@ -21,6 +22,7 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty therapist's online consultation")
     void checkUrgentTherapist() {
@@ -49,6 +51,7 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty paediatrician's online consultation")
     void checkUrgentPaediatrician() {
@@ -77,6 +80,7 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty vet's online consultation")
     void checkUrgentVet() {
@@ -103,5 +107,4 @@ public class OnlineConsultationTests extends TestBase {
             onlineConsultationPage.checkAuthOpportunities();
         });
     }
-
 }

@@ -9,6 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class DiagnosticsTests extends TestBase {
 
     @Test
+    @Tag("test")
     @Tag("diagnostics")
     @DisplayName("Successful search result from the complete list of diagnostic procedures")
     void searchDiagnosticProcedureFromCompleteList() {
@@ -30,6 +31,7 @@ public class DiagnosticsTests extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("diagnostics")
     @DisplayName("Successful result for matching diagnostics to physiological systems")
     void matchDiagnosticsToBodyIssues() {

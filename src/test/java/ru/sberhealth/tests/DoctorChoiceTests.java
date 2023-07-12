@@ -10,6 +10,7 @@ public class DoctorChoiceTests extends TestBase{
 
 
     @Test
+    @Tag("test")
     @Tag("main_page")
     @DisplayName("Check header links presence")
     void checkLogo() {
@@ -18,6 +19,7 @@ public class DoctorChoiceTests extends TestBase{
     }
 
     @Test
+    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful doctor choice")
     void successfulDoctorSearch() {
@@ -39,6 +41,7 @@ public class DoctorChoiceTests extends TestBase{
     }
 
     @Test
+    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful kids doctor choice")
     void successfulKidsDoctorSearch() {
@@ -63,6 +66,7 @@ public class DoctorChoiceTests extends TestBase{
     }
 
     @Test
+    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful DMS doctor choice")
     void successfulDmsDoctorSearch() {

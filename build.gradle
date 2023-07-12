@@ -58,6 +58,12 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
+task just_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("test")
+    }
+}
+
 task main_page_test(type: Test) {
     useJUnitPlatform {
         includeTags("main_page")
