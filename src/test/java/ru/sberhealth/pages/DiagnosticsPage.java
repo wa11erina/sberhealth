@@ -33,7 +33,7 @@ public class DiagnosticsPage {
     }
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.shouldBe(visible).click();
-        listOfCities.$(byText(city)).click();
+        listOfCities.shouldBe(visible).$(byText(city)).click();
 
         return this;
     }
@@ -73,8 +73,8 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
-        organsListAccess.click();
-        organsList.$(byText(organ)).click();
+        organsListAccess.shouldBe(visible).click();
+        organsList.shouldBe(visible).$(byText(organ)).click();
 
         return this;
     }
