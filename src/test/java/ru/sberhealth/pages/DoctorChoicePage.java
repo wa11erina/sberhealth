@@ -97,13 +97,13 @@ public class DoctorChoicePage {
         return this;
     }
     public DoctorChoicePage clickKidsTick() {
-        kidsTick.click();
+        kidsTick.shouldBe(visible).click();
 
         return this;
     }
 
     public DoctorChoicePage clickDmsTick() {
-        dmsTick.click();
+        dmsTick.shouldBe(visible).click();
 
         return this;
     }
