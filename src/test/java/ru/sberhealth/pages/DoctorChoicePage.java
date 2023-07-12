@@ -20,8 +20,8 @@ public class DoctorChoicePage {
         dropdownAreaSuggestions = $("[data-test-id='search_geo_items']"),
         searchButton = $("[data-test-id='search_button']"),
         resultsHeader = $(".top-seo-text__heading h1"),
-        kidsTick = $(".checkbox").$(byText("Детский врач")),
-        dmsTick = $(".checkbox").$(byText("По полису ДМС")),
+        kidsTick = $("[data-test-id='search-form-filters']").$(byText("Детский врач")),
+        dmsTick = $("[data-test-id='search-form-filters']").$(byText("По полису ДМС")),
         dmsAuth = $("[data-test-id='auth-by-dms']");
 
 
