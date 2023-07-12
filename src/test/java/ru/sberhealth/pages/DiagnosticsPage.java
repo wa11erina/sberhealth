@@ -12,7 +12,6 @@ public class DiagnosticsPage {
     SelenideElement
         headerLinks = $(".the-header__links"),
         cityChoiceBlock = $("#ChangeCityBlock"),
-        citySelector = $(".b-dropdown_list"),
         diagnosticsListAccess = $("#chosenDiagnostic"),
         diagnosticsList = $("#spec-list"),
         metroChoiceField = $("[placeholder='Укажите метро']"),
@@ -33,7 +32,7 @@ public class DiagnosticsPage {
     }
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.shouldBe(visible).click();
-        citySelector.$(byText(city)).click();
+        cityChoiceBlock.$(byText(city)).click();
 
         return this;
     }

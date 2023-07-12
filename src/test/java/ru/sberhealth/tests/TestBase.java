@@ -32,8 +32,6 @@ public class TestBase {
         baseUrl = System.getProperty("baseUrl","https://sberhealth.ru/");
         Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
