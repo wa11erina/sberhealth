@@ -34,6 +34,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
 
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
