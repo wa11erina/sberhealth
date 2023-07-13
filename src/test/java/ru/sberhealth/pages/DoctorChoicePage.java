@@ -105,7 +105,7 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkDmsAuthPresence() {
-        dmsAuth.should(appear);
+        dmsAuth.should(appear, Duration.ofSeconds(3));
 
         return this;
     }
