@@ -54,6 +54,5 @@ public class DiagnosticsTests extends TestBase {
         step ("Verify diagnostics search results", () -> {
             diagnosticsPage.verifyFoundResults("Ухо (слух)","Пионерская");
         });
-
     }
 }

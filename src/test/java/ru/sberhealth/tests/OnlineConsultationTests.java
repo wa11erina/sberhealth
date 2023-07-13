@@ -44,7 +44,6 @@ public class OnlineConsultationTests extends TestBase {
         step ("Verify consultation info & cost", () -> {
             onlineConsultationPage.verifyTherapistConsultationInfo("1 990", "₽");
         });
-
         step ("Check that there is authorization via mobile number, Сбер ID & Госуслуги", () -> {
             onlineConsultationPage.checkAuthOpportunities();
         });
@@ -73,7 +72,6 @@ public class OnlineConsultationTests extends TestBase {
         step ("Verify consultation info & cost", () -> {
             onlineConsultationPage.verifyPediatricianConsultationInfo("1 990", "₽");
         });
-
         step ("Check that there is authorization via mobile number, Сбер ID & Госуслуги", () -> {
             onlineConsultationPage.checkAuthOpportunities();
         });
@@ -102,7 +100,6 @@ public class OnlineConsultationTests extends TestBase {
         step ("Verify consultation info & cost", () -> {
             onlineConsultationPage.verifyVetConsultationInfo("990", "₽");
         });
-
         step ("Check that there is authorization via mobile number, Сбер ID & Госуслуги", () -> {
             onlineConsultationPage.checkAuthOpportunities();
         });
