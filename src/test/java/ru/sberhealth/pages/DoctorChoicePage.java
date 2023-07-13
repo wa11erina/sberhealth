@@ -99,19 +99,19 @@ public class DoctorChoicePage {
         return this;
     }
     public DoctorChoicePage clickKidsTick() {
-        kidsTick.shouldBe(visible, Duration.ofSeconds(3)).click();
+        kidsTick.click();
 
         return this;
     }
 
     public DoctorChoicePage clickDmsTick() {
-        dmsTick.shouldBe(visible, Duration.ofSeconds(3)).click();
+        dmsTick.click();
 
         return this;
     }
 
     public DoctorChoicePage checkDmsAuthPresence() {
-        dmsAuth.should(appear);
+        dmsAuth.should(appear, Duration.ofSeconds(3));
 
         return this;
     }

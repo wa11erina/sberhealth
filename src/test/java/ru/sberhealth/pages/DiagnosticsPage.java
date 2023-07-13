@@ -34,8 +34,8 @@ public class DiagnosticsPage {
         return this;
     }
     public DiagnosticsPage chooseCity(String city) {
-        cityChoiceBlock.shouldBe(visible, Duration.ofSeconds(3)).click();
-        listOfCities.shouldBe(visible, Duration.ofSeconds(3)).$(byText(city)).click();
+        cityChoiceBlock.click();
+        listOfCities.$(byText(city)).click();
 
         return this;
     }
@@ -75,8 +75,8 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
-        organsListAccess.shouldBe(visible, Duration.ofSeconds(3)).click();
-        organsList.shouldBe(visible, Duration.ofSeconds(3)).$(byText(organ)).click();
+        organsListAccess.click();
+        organsList.$(byText(organ)).click();
 
         return this;
     }
