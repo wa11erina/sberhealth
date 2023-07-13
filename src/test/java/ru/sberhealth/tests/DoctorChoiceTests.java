@@ -36,7 +36,7 @@ public class DoctorChoiceTests extends TestBase{
             doctorChoicePage.clickSearchButton();
         });
         step ("Check that the right doctors are chosen", () -> {
-            doctorChoicePage.checkRightDoctors("Стоматолог", "Ленинский проспект");
+            doctorChoicePage.checkRightDoctors("Стоматологи", "Ленинский проспект");
         });
     }
 

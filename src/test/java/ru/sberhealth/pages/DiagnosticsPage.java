@@ -35,14 +35,14 @@ public class DiagnosticsPage {
     }
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.click();
-        listOfCities.$(byText(city)).shouldBe(visible, Duration.ofSeconds(3)).click();
+        listOfCities.$(byText(city)).click();
 
         return this;
     }
 
     public DiagnosticsPage chooseDiagnostics(String procedure) {
         diagnosticsListAccess.click();
-        diagnosticsList.$(byText(procedure)).click();
+        diagnosticsList.shouldBe(visible).$(byText(procedure)).click();
 
         return this;
     }
@@ -50,7 +50,7 @@ public class DiagnosticsPage {
     public DiagnosticsPage chooseMetroStation(String station) {
         metroChoiceField.click();
         metroChoiceField.setValue(station);
-        chosenStation.$(byText(station)).click();
+        chosenStation.shouldBe(visible).$(byText(station)).click();
 
 
         return this;
@@ -69,14 +69,14 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage chooseBodyOrgan(String value) {
-        bodyOrgansList.$(byText(value)).click();
+        bodyOrgansList.shouldBe(visible).$(byText(value)).click();
 
         return this;
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
         organsListAccess.click();
-        organsList.$(byText(organ)).click();
+        organsList.shouldBe(visible).$(byText(organ)).click();
 
         return this;
     }

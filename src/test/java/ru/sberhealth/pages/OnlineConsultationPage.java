@@ -3,6 +3,7 @@ package ru.sberhealth.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -22,7 +23,6 @@ public class OnlineConsultationPage {
 
     public OnlineConsultationPage clickOnlineConsultation() {
         headerLinks.$(byText("Онлайн-консультации")).click();
-
 
         return this;
     }
@@ -46,14 +46,12 @@ public class OnlineConsultationPage {
         paediatricianLink.click();
 
         return this;
-
     }
 
     public OnlineConsultationPage clickVetLink() {
         vetLink.click();
 
         return this;
-
     }
 
     public OnlineConsultationPage checkTherapistHeaders() {
@@ -76,7 +74,6 @@ public class OnlineConsultationPage {
 
         return this;
     }
-
 
     public OnlineConsultationPage checkConsultationCost(String cost) {
         consultationCost.shouldHave(text("Стоимость "))
@@ -122,5 +119,4 @@ public class OnlineConsultationPage {
 
         return this;
     }
-
 }

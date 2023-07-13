@@ -52,30 +52,29 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage chooseCity(String city) {
-        listOfCities.$(byText(city)).click();
+        listOfCities.shouldBe(visible).$(byText(city)).click();
 
         return this;
     }
     public DoctorChoicePage typeDoctorProfile(String profile) {
         searchDoctorInput.click();
         searchDoctorField.setValue(profile);
-        dropdownDoctorProfiles.$(byText(profile)).click();
+        dropdownDoctorProfiles.shouldBe(visible).$(byText(profile)).click();
 
         return this;
     }
     public DoctorChoicePage typeCityArea1(String value) {
         searchAreaInput.click();
         searchAreaField1.setValue(value);
-        dropdownAreaSuggestions.$(byText(value)).click();
+        dropdownAreaSuggestions.shouldBe(visible).$(byText(value)).click();
 
         return this;
-
     }
 
     public DoctorChoicePage typeCityArea2(String value) {
         searchAreaInput.click();
         searchAreaField2.setValue(value);
-        dropdownAreaSuggestions.$(byText(value)).click();
+        dropdownAreaSuggestions.shouldBe(visible).$(byText(value)).click();
 
         return this;
     }
@@ -105,7 +104,7 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkDmsAuthPresence() {
-        dmsAuth.should(appear, Duration.ofSeconds(3));
+        dmsAuth.should(appear);
 
         return this;
     }
