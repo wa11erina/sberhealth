@@ -35,7 +35,7 @@ public class DiagnosticsPage {
     }
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.click();
-        listOfCities.shouldBe(visible).$(byText(city)).click();
+        listOfCities.shouldBe(visible, Duration.ofSeconds(3)).$(byText(city)).click();
 
         return this;
     }
