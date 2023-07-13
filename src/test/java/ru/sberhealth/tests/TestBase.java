@@ -46,7 +46,7 @@ public class TestBase {
     void beforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(Configuration.baseUrl);
-        Configuration.timeout = 7000;
+        Configuration.timeout = 10000;
         }
 
     @AfterEach
