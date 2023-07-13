@@ -2,6 +2,8 @@ package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -57,7 +59,7 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeDoctorProfile(String profile) {
         searchDoctorInput.click();
         searchDoctorField.setValue(profile);
-        dropdownDoctorProfiles.shouldBe(visible);
+        dropdownDoctorProfiles.shouldBe(visible, Duration.ofSeconds(3));
         dropdownDoctorProfiles.$(byText(profile)).click();
 
         return this;
@@ -65,7 +67,7 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeCityArea1(String value) {
         searchAreaInput.click();
         searchAreaField1.setValue(value);
-        dropdownAreaSuggestions.shouldBe(visible);
+        dropdownAreaSuggestions.shouldBe(visible, Duration.ofSeconds(3));
         dropdownAreaSuggestions.$(byText(value)).click();
 
 
@@ -76,7 +78,7 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeCityArea2(String value) {
         searchAreaInput.click();
         searchAreaField2.setValue(value);
-        dropdownAreaSuggestions.shouldBe(visible);
+        dropdownAreaSuggestions.shouldBe(visible, Duration.ofSeconds(3));
         dropdownAreaSuggestions.$(byText(value)).click();
 
 
@@ -91,19 +93,19 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkRightDoctors(String profile, String value) {
-        resultsHeader.shouldBe(visible).shouldHave(text(profile))
+        resultsHeader.shouldBe(visible, Duration.ofSeconds(3)).shouldHave(text(profile))
                 .shouldHave(text(value));
 
         return this;
     }
     public DoctorChoicePage clickKidsTick() {
-        kidsTick.shouldBe(visible).click();
+        kidsTick.shouldBe(visible, Duration.ofSeconds(3)).click();
 
         return this;
     }
 
     public DoctorChoicePage clickDmsTick() {
-        dmsTick.shouldBe(visible).click();
+        dmsTick.shouldBe(visible, Duration.ofSeconds(3)).click();
 
         return this;
     }

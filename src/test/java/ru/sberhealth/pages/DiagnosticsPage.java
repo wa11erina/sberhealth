@@ -2,6 +2,8 @@ package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
@@ -32,8 +34,8 @@ public class DiagnosticsPage {
         return this;
     }
     public DiagnosticsPage chooseCity(String city) {
-        cityChoiceBlock.shouldBe(visible).click();
-        listOfCities.shouldBe(visible).$(byText(city)).click();
+        cityChoiceBlock.shouldBe(visible, Duration.ofSeconds(3)).click();
+        listOfCities.shouldBe(visible, Duration.ofSeconds(3)).$(byText(city)).click();
 
         return this;
     }
@@ -73,8 +75,8 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
-        organsListAccess.shouldBe(visible).click();
-        organsList.shouldBe(visible).$(byText(organ)).click();
+        organsListAccess.shouldBe(visible, Duration.ofSeconds(3)).click();
+        organsList.shouldBe(visible, Duration.ofSeconds(3)).$(byText(organ)).click();
 
         return this;
     }
