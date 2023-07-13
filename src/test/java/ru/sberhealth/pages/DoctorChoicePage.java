@@ -91,7 +91,7 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkRightDoctors(String profile, String value) {
-        resultsHeader.shouldHave(text(profile))
+        resultsHeader.shouldBe(visible).shouldHave(text(profile))
                 .shouldHave(text(value));
 
         return this;
