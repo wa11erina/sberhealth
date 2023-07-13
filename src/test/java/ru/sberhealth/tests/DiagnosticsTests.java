@@ -16,7 +16,7 @@ public class DiagnosticsTests extends TestBase {
     @DisplayName("Successful search result from the complete list of diagnostic procedures")
     void searchDiagnosticProcedureFromCompleteList() {
         step ("Open 'Диагностика' page", () -> {
-            diagnosticsPage.clickDiagnosticsLink();
+            diagnosticsPage.openDiagnosticsPage();
         });
         step ("Choose city", () -> {
             diagnosticsPage.chooseCity("Санкт-Петербург");
@@ -39,7 +39,7 @@ public class DiagnosticsTests extends TestBase {
     @DisplayName("Successful result for matching diagnostics to physiological systems")
     void matchDiagnosticsToBodyIssues() {
         step("Open 'Диагностика' page", () -> {
-            diagnosticsPage.clickDiagnosticsLink();
+            diagnosticsPage.openDiagnosticsPage();
         });
         step("Choose city", () -> {
             diagnosticsPage.chooseCity("Санкт-Петербург");

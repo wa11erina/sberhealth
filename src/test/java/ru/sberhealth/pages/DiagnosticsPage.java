@@ -2,12 +2,9 @@ package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.byValue;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DiagnosticsPage {
@@ -28,9 +25,9 @@ public class DiagnosticsPage {
         finalConclusion = $(".h1");
 
 
-    public DiagnosticsPage clickDiagnosticsLink() {
-        headerLinks.$(byText("Диагностика")).click();
-
+    public DiagnosticsPage openDiagnosticsPage() {
+        open("https://diagnostica.docdoc.ru/");
+        $(".spec_list.diagnostic-top-list").shouldHave(text("Бронхоскопия"));
         return this;
     }
     public DiagnosticsPage chooseCity(String city) {
