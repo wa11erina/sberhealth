@@ -35,14 +35,14 @@ public class DiagnosticsPage {
     }
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.click();
-        listOfCities.shouldBe(visible).$(byText(city)).click();
+        listOfCities.shouldBe(visible, Duration.ofSeconds(3)).$(byText(city)).click();
 
         return this;
     }
 
     public DiagnosticsPage chooseDiagnostics(String procedure) {
         diagnosticsListAccess.click();
-        diagnosticsList.$(byText(procedure)).click();
+        diagnosticsList.shouldBe(visible).$(byText(procedure)).click();
 
         return this;
     }
