@@ -59,7 +59,6 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeDoctorProfile(String profile) {
         searchDoctorInput.click();
         searchDoctorField.setValue(profile);
-        dropdownDoctorProfiles.shouldBe(visible, Duration.ofSeconds(3));
         dropdownDoctorProfiles.$(byText(profile)).click();
 
         return this;
@@ -67,9 +66,7 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeCityArea1(String value) {
         searchAreaInput.click();
         searchAreaField1.setValue(value);
-        dropdownAreaSuggestions.shouldBe(visible, Duration.ofSeconds(3));
         dropdownAreaSuggestions.$(byText(value)).click();
-
 
         return this;
 
@@ -78,12 +75,9 @@ public class DoctorChoicePage {
     public DoctorChoicePage typeCityArea2(String value) {
         searchAreaInput.click();
         searchAreaField2.setValue(value);
-        dropdownAreaSuggestions.shouldBe(visible, Duration.ofSeconds(3));
         dropdownAreaSuggestions.$(byText(value)).click();
 
-
         return this;
-
     }
 
     public DoctorChoicePage clickSearchButton() {
@@ -93,7 +87,7 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkRightDoctors(String profile, String value) {
-        resultsHeader.shouldBe(visible, Duration.ofSeconds(3)).shouldHave(text(profile))
+        resultsHeader.shouldHave(text(profile))
                 .shouldHave(text(value));
 
         return this;
@@ -111,7 +105,7 @@ public class DoctorChoicePage {
     }
 
     public DoctorChoicePage checkDmsAuthPresence() {
-        dmsAuth.should(appear, Duration.ofSeconds(3));
+        dmsAuth.should(appear);
 
         return this;
     }

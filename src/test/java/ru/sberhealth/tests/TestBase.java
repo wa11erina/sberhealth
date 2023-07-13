@@ -32,7 +32,7 @@ public class TestBase {
         baseUrl = System.getProperty("baseUrl","https://sberhealth.ru/");
         Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.timeout = 7000;
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -46,6 +46,7 @@ public class TestBase {
     void beforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(Configuration.baseUrl);
+        Configuration.timeout = 7000;
         }
 
     @AfterEach
