@@ -57,7 +57,7 @@ ____
 ____
 
 <a id="jenkins"></a>
-> ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logos/Jenkins.svg"> Сборка в Jenkins
+> ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logos/Jenkins.svg"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/)
 
 Для запуска сборки необходимо перейти в раздел <code>Собрать с параметрами</code> и нажать кнопку <code>Собрать</code>.
 
@@ -128,7 +128,7 @@ ____
 ____
 
 <a id="allure-testops"></a>
->## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+>## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3505/dashboards">Allure TestOps</a>
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
@@ -146,7 +146,37 @@ ____
 <img title="Allure Tests" src="media/screens/allure_to_dms_case.png" width="850">  
   
 <img title="Allure Tests" src="media/screens/allure_to_therapist_case.png" width="850">  
+</p>
+
+____
+
+<a id="jira"></a>
+## <img alt="Allure" height="25" src="media/logos/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-786)">Jira</a>
+
+
+<p align="center">  
+<img title="Jira" src="media/screens/jira_plus_allure_to.png" width="850">  
+</p>
 
 </p>
 
 ____
+
+<a id="telegram"></a>
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logos/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+После завершения сборки созданный в <code>Telegram</code> бот автоматически обрабатывает результаты и отправляет уведомление со ссылкой на отчет.
+
+<p align="center">
+<img width="70%" title="Telegram Notifications" src="media/screens/happy_tisha.png">
+</p>
+
+____
+<a id="video"></a>
+## Видео примера запуска тестов в Selenoid
+
+К каждому тесту в отчете прилагается видео его выполнения.
+<p align="center">
+<img title="Selenoid Video" src="media/videos/vet_online.gif" width="500" height="300" alt="video"> <img title="Selenoid Video" src="media/videos/doctor_online.gif" width="500" height="300" alt="video">
+  
+</p>
