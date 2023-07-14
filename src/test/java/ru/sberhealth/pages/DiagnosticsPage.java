@@ -2,8 +2,7 @@ package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -38,6 +37,7 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage chooseDiagnostics(String procedure) {
+        diagnosticsListAccess.shouldBe(interactable);
         diagnosticsListAccess.click();
         diagnosticsList.shouldBe(visible).$(byText(procedure)).click();
 
