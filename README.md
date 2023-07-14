@@ -124,3 +124,29 @@ ____
 
 <img title="Allure Graphics" src="media/screens/allure_graph2.png" width="850">  
 </p>
+
+____
+
+<a id="allure-testops"></a>
+>## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
+
+Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
+Результат выполнения автотестов отображается в <code>Allure TestOps</code>
+На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
+
+## Allure TestOps Dashboard
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="media/screens/allure_to_dashboards.png" width="850">
+</p>  
+
+## Тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="media/screens/allure_to_dms_case.png" width="850">  
+  
+<img title="Allure Tests" src="media/screens/allure_to_therapist_case.png" width="850">  
+
+</p>
+
+____
