@@ -98,3 +98,29 @@ ${TASK}
 -DbrowserVersion=${BROWSER_VERSION}
 -DscreenResolution=${SCREEN_RESOLUTION}
 ```
+____
+
+<a id="allure"></a>
+> ## <img alt="Allure" height="25" src="media/logos/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [Report](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/45/allure/)</a>
+
+### Основная страница отчёта
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/screens/allure_main.png" width="850">  
+</p>  
+
+### Тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="media/screens/allure_kids_case.png" width="850">  
+  
+<img title="Allure Tests" src="media/screens/allure_vet_case.png" width="850">
+</p>
+
+### Графики
+
+<p align="center">  
+<img title="Allure Graphics" src="media/screens/allure_graph1.png" width="850">
+
+<img title="Allure Graphics" src="media/screens/allure_graph2.png" width="850">  
+</p>
