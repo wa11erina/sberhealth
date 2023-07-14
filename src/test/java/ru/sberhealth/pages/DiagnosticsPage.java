@@ -27,6 +27,7 @@ public class DiagnosticsPage {
     public DiagnosticsPage openDiagnosticsPage() {
         open("https://diagnostica.docdoc.ru/");
         $(".spec_list.diagnostic-top-list").shouldHave(text("Бронхоскопия"));
+        $(".about_list_short").shouldHave(text("в Москве"));
         return this;
     }
     public DiagnosticsPage chooseCity(String city) {
