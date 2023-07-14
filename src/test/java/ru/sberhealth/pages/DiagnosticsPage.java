@@ -72,6 +72,7 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
+        organsListAccess.shouldBe(interactable);
         organsListAccess.click();
         organsList.shouldBe(visible).$(byText(organ)).click();
 
