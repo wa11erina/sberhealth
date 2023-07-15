@@ -2,12 +2,8 @@ package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import java.time.Duration;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.byValue;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DiagnosticsPage {
@@ -27,9 +23,10 @@ public class DiagnosticsPage {
         finalConclusion = $(".h1");
 
 
-    public DiagnosticsPage clickDiagnosticsLink() {
-        headerLinks.$(byText("Диагностика")).click();
-
+    public DiagnosticsPage openDiagnosticsPage() {
+        open("https://diagnostica.docdoc.ru/");
+        $(".spec_list.diagnostic-top-list").shouldHave(text("УЗИ"));
+        $(".about_list_short").shouldHave(text("в Москве"));
         return this;
     }
     public DiagnosticsPage chooseCity(String city) {
@@ -40,6 +37,7 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage chooseDiagnostics(String procedure) {
+        diagnosticsListAccess.shouldBe(interactable);
         diagnosticsListAccess.click();
         diagnosticsList.shouldBe(visible).$(byText(procedure)).click();
 
@@ -74,6 +72,7 @@ public class DiagnosticsPage {
     }
 
     public DiagnosticsPage specifyOrganToDiagnose(String organ) {
+        organsListAccess.shouldBe(interactable);
         organsListAccess.click();
         organsList.shouldBe(visible).$(byText(organ)).click();
 

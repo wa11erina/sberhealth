@@ -28,6 +28,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
+        Configuration.pollingInterval = 400;
         Configuration.browserSize = System.getProperty("screenResolution","1920x1080");
         baseUrl = System.getProperty("baseUrl","https://sberhealth.ru/");
         Configuration.remote = System.getProperty("remoteUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
