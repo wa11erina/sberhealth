@@ -15,21 +15,21 @@ public class DiagnosticsTests extends TestBase {
     @Tag("diagnostics")
     @DisplayName("Successful search result from the complete list of diagnostic procedures")
     void searchDiagnosticProcedureFromCompleteList() {
-        step ("Open 'Диагностика' page", () -> {
+        step("Open 'Диагностика' page", () -> {
             diagnosticsPage.openDiagnosticsPage();
         });
-        step ("Choose city", () -> {
+        step("Choose city", () -> {
             diagnosticsPage.chooseCity("Санкт-Петербург");
             $(".about_list_short").shouldHave(Condition.text("в Санкт-Петербурге"));
         });
-        step ("Choose diagnostics procedure", () -> {
+        step("Choose diagnostics procedure", () -> {
             diagnosticsPage.chooseDiagnostics("4D УЗИ");
         });
-        step ("Choose metro station", () -> {
+        step("Choose metro station", () -> {
             diagnosticsPage.chooseMetroStation("Василеостровская");
         });
-        step ("Check diagnostics search results", () -> {
-            diagnosticsPage.checkSearchResults("4D УЗИ","Василеостровская");
+        step("Check diagnostics search results", () -> {
+            diagnosticsPage.checkSearchResults("4D УЗИ", "Василеостровская");
         });
     }
 
@@ -48,14 +48,14 @@ public class DiagnosticsTests extends TestBase {
             diagnosticsPage.findMatchDiagnosticsBlock();
             diagnosticsPage.chooseBodyOrgan("Слуха");
         });
-        step ("Specify organ to diagnose", () -> {
+        step("Specify organ to diagnose", () -> {
             diagnosticsPage.specifyOrganToDiagnose("Ухо (слух)");
         });
-        step ("Choose metro station", () -> {
+        step("Choose metro station", () -> {
             diagnosticsPage.chooseMetroStation("Пионерская");
         });
-        step ("Verify diagnostics search results", () -> {
-            diagnosticsPage.verifyFoundResults("Ухо (слух)","Пионерская");
+        step("Verify diagnostics search results", () -> {
+            diagnosticsPage.verifyFoundResults("Ухо (слух)", "Пионерская");
         });
     }
 }

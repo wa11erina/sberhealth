@@ -30,7 +30,7 @@ allure {
 }
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "com.codeborne:selenide:6.16.0",
             'io.qameta.allure:allure-selenide:2.22.2',
             'com.github.javafaker:javafaker:1.0.2',
@@ -85,6 +85,6 @@ task urgent_consultation_test(type: Test) {
 task diagnostics_search_test(type: Test) {
     useJUnitPlatform {
         includeTags("diagnostics")
-        }
+    }
 }
 

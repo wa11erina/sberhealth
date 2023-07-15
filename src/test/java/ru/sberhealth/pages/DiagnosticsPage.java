@@ -4,31 +4,35 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class DiagnosticsPage {
+    String diagnosticsPage = "https://diagnostica.docdoc.ru/";
     SelenideElement
-        headerLinks = $(".the-header__links"),
-        cityChoiceBlock = $("#ChangeCityBlock"),
-        diagnosticsListAccess = $("#chosenDiagnostic"),
-        diagnosticsList = $("#spec-list"),
-        metroChoiceField = $("[placeholder='Укажите метро']"),
-        chosenStation = $(".ui-menu-item"),
-        headerResults = $("h1"),
-        matchDiagnosticsHeader = $("h2"),
-        bodyOrgansList = $(".organ-top-list"),
-        organsListAccess = $("#chosenOrgan"),
-        organsList = diagnosticsList,
-        breadCrumbs = $ (".breadcrumbs"),
-        finalConclusion = $(".h1");
+            mainDiagnosticsList = $(".spec_list.diagnostic-top-list"),
+            currentCityBlock = $(".about_list_short"),
+            cityChoiceBlock = $("#ChangeCityBlock"),
+            diagnosticsListAccess = $("#chosenDiagnostic"),
+            diagnosticsList = $("#spec-list"),
+            metroChoiceField = $("[placeholder='Укажите метро']"),
+            chosenStation = $(".ui-menu-item"),
+            headerResults = $("h1"),
+            matchDiagnosticsHeader = $("h2"),
+            bodyOrgansList = $(".organ-top-list"),
+            organsListAccess = $("#chosenOrgan"),
+            organsList = diagnosticsList,
+            breadCrumbs = $(".breadcrumbs"),
+            finalConclusion = $(".h1");
 
 
     public DiagnosticsPage openDiagnosticsPage() {
-        open("https://diagnostica.docdoc.ru/");
-        $(".spec_list.diagnostic-top-list").shouldHave(text("УЗИ"));
-        $(".about_list_short").shouldHave(text("в Москве"));
+        open(diagnosticsPage);
+        mainDiagnosticsList.shouldHave(text("УЗИ"));
+        currentCityBlock.shouldHave(text("в Москве"));
         return this;
     }
+
     public DiagnosticsPage chooseCity(String city) {
         cityChoiceBlock.click();
         cityChoiceBlock.$(byText(city)).click();
@@ -52,15 +56,17 @@ public class DiagnosticsPage {
 
         return this;
     }
+
     public DiagnosticsPage checkSearchResults(String procedure, String station) {
-        headerResults.shouldHave(text (procedure))
+        headerResults.shouldHave(text(procedure))
                 .shouldHave(text(station));
 
         return this;
 
     }
+
     public DiagnosticsPage findMatchDiagnosticsBlock() {
-        matchDiagnosticsHeader.shouldHave(text ("Подобрать исследование"));
+        matchDiagnosticsHeader.shouldHave(text("Подобрать исследование"));
 
         return this;
     }

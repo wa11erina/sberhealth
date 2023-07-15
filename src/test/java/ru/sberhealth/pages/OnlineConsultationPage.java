@@ -3,22 +3,20 @@ package ru.sberhealth.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 
 public class OnlineConsultationPage {
     SelenideElement
-        headerLinks = $(".the-header__links"),
-        urgentConsultationPage = $("[data-testid='urgent-consultations-block-wrapper']"),
-        therapistLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Терапевт")),
-        paediatricianLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Педиатр")),
-        vetLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Ветеринар")),
-        dutySpecialist = $("[data-testid='catalog-product-banner-wrapper']"),
-        dutySpecialistHelpsOnline = $("[data-testid='catalog-product-block-title']"),
-        consultationCost = $("[data-testid='catalog-product-price-wrapper']"),
-        loginForm = $(".checkout-login");
-
+            headerLinks = $(".the-header__links"),
+            urgentConsultationPage = $("[data-testid='urgent-consultations-block-wrapper']"),
+            therapistLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Терапевт")),
+            paediatricianLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Педиатр")),
+            vetLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Ветеринар")),
+            dutySpecialist = $("[data-testid='catalog-product-banner-wrapper']"),
+            dutySpecialistHelpsOnline = $("[data-testid='catalog-product-block-title']"),
+            consultationCost = $("[data-testid='catalog-product-price-wrapper']"),
+            loginForm = $(".checkout-login");
 
 
     public OnlineConsultationPage clickOnlineConsultation() {
