@@ -26,7 +26,7 @@ public class DiagnosticsPage {
 
     public DiagnosticsPage openDiagnosticsPage() {
         open("https://diagnostica.docdoc.ru/");
-        $(".spec_list.diagnostic-top-list").shouldHave(text("Бронхоскопия"));
+        $(".spec_list.diagnostic-top-list").shouldHave(text("УЗИ"));
         $(".about_list_short").shouldHave(text("в Москве"));
         return this;
     }
