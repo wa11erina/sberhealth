@@ -9,12 +9,11 @@ import static io.qameta.allure.Allure.step;
 public class OnlineConsultationTests extends TestBase {
 
     @Test
-    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check presence of 'Срочные консультации (Терапевт, педиатр, ветеринар)' on 'Онлайн-консультации' page")
     void checkUrgentLinks() {
         step("Open 'Онлайн-консультации' page", () -> {
-            onlineConsultationPage.clickOnlineConsultation();
+            onlineConsultationPage.openOnlineConsultationPage();
         });
         step("Check presence of links", () -> {
             onlineConsultationPage.checkPresenceofUrgentLinks();
@@ -22,12 +21,11 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty therapist's online consultation")
     void checkUrgentTherapist() {
         step("Open 'Онлайн-консультации' page", () -> {
-            onlineConsultationPage.clickOnlineConsultation();
+            onlineConsultationPage.openOnlineConsultationPage();
         });
         step("Click 'Терапевт' link", () -> {
             onlineConsultationPage.clickTherapistLink();
@@ -50,12 +48,11 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty paediatrician's online consultation")
     void checkUrgentPaediatrician() {
         step("Open 'Онлайн-консультации' page", () -> {
-            onlineConsultationPage.clickOnlineConsultation();
+            onlineConsultationPage.openOnlineConsultationPage();
         });
         step("Click 'Педиатр' link", () -> {
             onlineConsultationPage.clickPaediatricianLink();
@@ -78,12 +75,11 @@ public class OnlineConsultationTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("consultation")
     @DisplayName("Check the opportunity to get duty vet's online consultation")
     void checkUrgentVet() {
         step("Open 'Онлайн-консультации' page", () -> {
-            onlineConsultationPage.clickOnlineConsultation();
+            onlineConsultationPage.openOnlineConsultationPage();
         });
         step("Click 'Ветеринар' link", () -> {
             onlineConsultationPage.clickVetLink();

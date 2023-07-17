@@ -11,7 +11,6 @@ import static io.qameta.allure.Allure.step;
 public class DiagnosticsTests extends TestBase {
 
     @Test
-    @Tag("test")
     @Tag("diagnostics")
     @DisplayName("Successful search result from the complete list of diagnostic procedures")
     void searchDiagnosticProcedureFromCompleteList() {
@@ -19,8 +18,7 @@ public class DiagnosticsTests extends TestBase {
             diagnosticsPage.openDiagnosticsPage();
         });
         step("Choose city", () -> {
-            diagnosticsPage.chooseCity("Санкт-Петербург");
-            $(".about_list_short").shouldHave(Condition.text("в Санкт-Петербурге"));
+            diagnosticsPage.chooseCity("Санкт-Петербург", "в Санкт-Петербурге");
         });
         step("Choose diagnostics procedure", () -> {
             diagnosticsPage.chooseDiagnostics("4D УЗИ");
@@ -34,7 +32,6 @@ public class DiagnosticsTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("diagnostics")
     @DisplayName("Successful result for matching diagnostics to physiological systems")
     void matchDiagnosticsToBodyIssues() {
@@ -42,7 +39,7 @@ public class DiagnosticsTests extends TestBase {
             diagnosticsPage.openDiagnosticsPage();
         });
         step("Choose city", () -> {
-            diagnosticsPage.chooseCity("Санкт-Петербург");
+            diagnosticsPage.chooseCity("Санкт-Петербург", "в Санкт-Петербурге");
         });
         step("Match diagnostics to body system", () -> {
             diagnosticsPage.findMatchDiagnosticsBlock();

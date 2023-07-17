@@ -5,18 +5,18 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class DoctorChoicePage {
+    String doctorChoicePage = "https://docdoc.ru/doctor";
     SelenideElement
-            headerLinks = $(".the-header__links"),
             wrongCity = $(".Popover__footer_25aR").$(byText("Нет, не он")),
             listOfCities = $(".CitySelectModal__cities-wrapper_1BfH"),
             searchDoctorInput = $("[data-test-id='search_input']"),
             searchDoctorField = $("[placeholder='Врач, клиника, болезнь, услуга']"),
             dropdownDoctorProfiles = $(".v-autocomplete-list-item"),
             searchAreaInput = $("[data-test-id='search_geo_input']"),
-            searchAreaField1 = $("[placeholder='Метро, район, город']"),
-            searchAreaField2 = $("[placeholder='Метро, район']"),
+            searchAreaField = $("[data-test-id=search_geo_input] .v-autocomplete-input"),
             dropdownAreaSuggestions = $("[data-test-id='search_geo_items']"),
             searchButton = $("[data-test-id='search_button']"),
             resultsHeader = $(".top-seo-text__heading h1"),
@@ -25,21 +25,8 @@ public class DoctorChoicePage {
             dmsAuth = $("[data-test-id='auth-by-dms']");
 
 
-    public DoctorChoicePage checkHeaderLinks() {
-
-        headerLinks.shouldHave(text("Приём врача в клинике"))
-                .shouldHave(text("Онлайн-консультации"))
-                .shouldHave(text("Диагностика"))
-                .shouldHave(text("Анализы"))
-                .shouldHave(text("Услуги"))
-                .shouldHave(text("Компаниям"))
-                .shouldHave(text("Линия доверия"));
-
-        return this;
-    }
-
-    public DoctorChoicePage clickDoctorAppointment() {
-        headerLinks.$(byText("Приём врача в клинике")).click();
+    public DoctorChoicePage openDoctorChoicePage() {
+        open(doctorChoicePage);
 
         return this;
     }
@@ -66,7 +53,7 @@ public class DoctorChoicePage {
 
     public DoctorChoicePage typeCityArea1(String value) {
         searchAreaInput.click();
-        searchAreaField1.setValue(value);
+        searchAreaField.setValue(value);
         dropdownAreaSuggestions.shouldBe(visible).$(byText(value)).click();
 
         return this;
@@ -74,7 +61,7 @@ public class DoctorChoicePage {
 
     public DoctorChoicePage typeCityArea2(String value) {
         searchAreaInput.click();
-        searchAreaField2.setValue(value);
+        searchAreaField.setValue(value);
         dropdownAreaSuggestions.shouldBe(visible).$(byText(value)).click();
 
         return this;

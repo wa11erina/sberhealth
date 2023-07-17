@@ -5,8 +5,11 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class OnlineConsultationPage {
+
+    String onlineConsultationPage = "https://lk.sberhealth.ru/catalog-products";
     SelenideElement
             headerLinks = $(".the-header__links"),
             urgentConsultationPage = $("[data-testid='urgent-consultations-block-wrapper']"),
@@ -16,11 +19,13 @@ public class OnlineConsultationPage {
             dutySpecialist = $("[data-testid='catalog-product-banner-wrapper']"),
             dutySpecialistHelpsOnline = $("[data-testid='catalog-product-block-title']"),
             consultationCost = $("[data-testid='catalog-product-price-wrapper']"),
+            serviceName = $("#basket-product-name"),
+            servicePrice =$("#basket-product-price"),
             loginForm = $(".checkout-login");
 
 
-    public OnlineConsultationPage clickOnlineConsultation() {
-        headerLinks.$(byText("Онлайн-консультации")).click();
+    public OnlineConsultationPage openOnlineConsultationPage() {
+        open(onlineConsultationPage);
 
         return this;
     }
@@ -88,24 +93,24 @@ public class OnlineConsultationPage {
     }
 
     public OnlineConsultationPage verifyTherapistConsultationInfo(String cost, String rubles) {
-        loginForm.shouldHave(text("Дежурный терапевт - разовая консультация"))
-                .shouldHave(text(cost))
-                .shouldHave(text(rubles));
+        serviceName.shouldHave(text("Дежурный терапевт - разовая консультация"));
+        servicePrice.shouldHave(text(cost))
+                    .shouldHave(text(rubles));
 
         return this;
     }
 
     public OnlineConsultationPage verifyPediatricianConsultationInfo(String cost, String rubles) {
-        loginForm.shouldHave(text("Дежурный педиатр - разовая консультация"))
-                .shouldHave(text(cost))
+        serviceName.shouldHave(text("Дежурный педиатр - разовая консультация"));
+        servicePrice.shouldHave(text(cost))
                 .shouldHave(text(rubles));
 
         return this;
     }
 
     public OnlineConsultationPage verifyVetConsultationInfo(String cost, String rubles) {
-        loginForm.shouldHave(text(cost))
-                .shouldHave(text(rubles));
+        servicePrice.shouldHave(text(cost))
+                    .shouldHave(text(rubles));
 
         return this;
     }

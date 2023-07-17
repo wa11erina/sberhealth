@@ -10,21 +10,11 @@ public class DoctorChoiceTests extends TestBase {
 
 
     @Test
-    @Tag("test")
-    @Tag("main_page")
-    @DisplayName("Check header links presence")
-    void checkLogo() {
-        doctorChoicePage.checkHeaderLinks();
-
-    }
-
-    @Test
-    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful doctor choice")
     void successfulDoctorSearch() {
-        step("Click Приём врача в клинике", () -> {
-            doctorChoicePage.clickDoctorAppointment();
+        step("Open 'Приём врача в клинике' page", () -> {
+            doctorChoicePage.openDoctorChoicePage();
         });
         step("City choice", () -> {
             doctorChoicePage.clickWrongCity();
@@ -41,12 +31,11 @@ public class DoctorChoiceTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful kids doctor choice")
     void successfulKidsDoctorSearch() {
-        step("Click Приём врача в клинике", () -> {
-            doctorChoicePage.clickDoctorAppointment();
+        step("Open Приём врача в клинике page", () -> {
+            doctorChoicePage.openDoctorChoicePage();
         });
         step("City choice", () -> {
             doctorChoicePage.clickWrongCity();
@@ -66,12 +55,11 @@ public class DoctorChoiceTests extends TestBase {
     }
 
     @Test
-    @Tag("test")
     @Tag("doctors")
     @DisplayName("Successful DMS doctor choice")
     void successfulDmsDoctorSearch() {
-        step("Click Приём врача в клинике", () -> {
-            doctorChoicePage.clickDoctorAppointment();
+        step("Open Приём врача в клинике page", () -> {
+            doctorChoicePage.openDoctorChoicePage();
         });
         step("City choice", () -> {
             doctorChoicePage.clickWrongCity();

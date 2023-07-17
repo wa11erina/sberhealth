@@ -13,11 +13,12 @@ public class DiagnosticsPage {
             mainDiagnosticsList = $(".spec_list.diagnostic-top-list"),
             currentCityBlock = $(".about_list_short"),
             cityChoiceBlock = $("#ChangeCityBlock"),
+            cityNameInsideDescription = $(".about_list_short"),
             diagnosticsListAccess = $("#chosenDiagnostic"),
             diagnosticsList = $("#spec-list"),
-            metroChoiceField = $("[placeholder='Укажите метро']"),
-            chosenStation = $(".ui-menu-item"),
-            headerResults = $("h1"),
+            metroChoiceField = $("[data-autocomplete-id='autocomplete-geo']"),
+            chosenStation = $(".ui-corner-all"),
+            searchResultsTitle = $("h1"),
             matchDiagnosticsHeader = $("h2"),
             bodyOrgansList = $(".organ-top-list"),
             organsListAccess = $("#chosenOrgan"),
@@ -33,9 +34,10 @@ public class DiagnosticsPage {
         return this;
     }
 
-    public DiagnosticsPage chooseCity(String city) {
+    public DiagnosticsPage chooseCity(String city, String inTheCity) {
         cityChoiceBlock.click();
         cityChoiceBlock.$(byText(city)).click();
+        cityNameInsideDescription.shouldHave(text(inTheCity));
 
         return this;
     }
@@ -53,16 +55,14 @@ public class DiagnosticsPage {
         metroChoiceField.setValue(station);
         chosenStation.shouldBe(visible).$(byText(station)).click();
 
-
         return this;
     }
 
     public DiagnosticsPage checkSearchResults(String procedure, String station) {
-        headerResults.shouldHave(text(procedure))
+        searchResultsTitle.shouldHave(text(procedure))
                 .shouldHave(text(station));
 
         return this;
-
     }
 
     public DiagnosticsPage findMatchDiagnosticsBlock() {

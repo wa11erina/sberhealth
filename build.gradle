@@ -11,8 +11,8 @@ repositories {
 }
 
 def selenideVersion = "6.16.0",
-    allureVersion = "2.21.0",
-    jUnitVersion = "5.9.3",
+    allureVersion = "2.23.0",
+    jUnitVersion = "5.10.0-RC1",
     slf4jVersion = "2.0.7"
 
 allure {
@@ -31,11 +31,10 @@ allure {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.16.0",
-            'io.qameta.allure:allure-selenide:2.22.2',
-            'com.github.javafaker:javafaker:1.0.2',
-            "org.junit.jupiter:junit-jupiter:5.10.0-M1",
-            "org.slf4j:slf4j-simple:2.0.7")
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.junit.jupiter:junit-jupiter:$jUnitVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion")
 
 }
 
@@ -54,15 +53,11 @@ tasks.withType(Test) {
 compileJava {
     options.encoding = 'UTF-8'
 }
+
 compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-task just_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("test")
-    }
-}
 
 task main_page_test(type: Test) {
     useJUnitPlatform {
