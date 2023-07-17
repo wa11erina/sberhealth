@@ -112,7 +112,7 @@ ${TASK}
 ____
 
 <a id="allure"></a>
-> ## <img alt="Allure" height="25" src="media/logos/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [Report](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/45/allure/)</a>
+> ## <img alt="Allure" height="25" src="media/logos/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [Report](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/53/allure/)</a>
 
 ### Основная страница отчёта
 
