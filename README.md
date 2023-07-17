@@ -139,7 +139,7 @@ ____
 ____
 
 <a id="allure-testops"></a>
-> ## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3505/dashboards">Allure TestOps</a>
+> ## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/27306">Allure TestOps</a>
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
