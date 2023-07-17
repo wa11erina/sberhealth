@@ -20,7 +20,7 @@ public class OnlineConsultationPage {
             dutySpecialistHelpsOnline = $("[data-testid='catalog-product-block-title']"),
             consultationCost = $("[data-testid='catalog-product-price-wrapper']"),
             serviceName = $("#basket-product-name"),
-            servicePrice =$("#basket-product-price"),
+            servicePrice = $("#basket-product-price"),
             loginForm = $(".checkout-login");
 
 
@@ -95,7 +95,7 @@ public class OnlineConsultationPage {
     public OnlineConsultationPage verifyTherapistConsultationInfo(String cost, String rubles) {
         serviceName.shouldHave(text("Дежурный терапевт - разовая консультация"));
         servicePrice.shouldHave(text(cost))
-                    .shouldHave(text(rubles));
+                .shouldHave(text(rubles));
 
         return this;
     }
@@ -110,7 +110,7 @@ public class OnlineConsultationPage {
 
     public OnlineConsultationPage verifyVetConsultationInfo(String cost, String rubles) {
         servicePrice.shouldHave(text(cost))
-                    .shouldHave(text(rubles));
+                .shouldHave(text(rubles));
 
         return this;
     }

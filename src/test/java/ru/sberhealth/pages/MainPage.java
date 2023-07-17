@@ -1,16 +1,17 @@
 package ru.sberhealth.pages;
 
 import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainPage {
     SelenideElement
-        headerLinks = $(".the-header__links"),
-        doctorChoicePageElementToCheck = $("[data-test-id='search-form-layout']"),
-        onlineConsultationPageElementToCheck = $("h4"),
-        diagnosticsPageElementToCheck = $(".search_form");
+            headerLinks = $(".the-header__links"),
+            doctorChoicePageElementToCheck = $("[data-test-id='search-form-layout']"),
+            onlineConsultationPageElementToCheck = $("h4"),
+            diagnosticsPageElementToCheck = $(".search_form");
 
     public MainPage checkHeaderLinks() {
         headerLinks.shouldHave(text("Приём врача в клинике"))
