@@ -17,6 +17,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Check Doctor choice link")
     void checkDoctorChoiceLink() {
         mainPage.clickDoctorChoice();
+        doctorChoicePage.checkDoctorChoicePageOpened();
     }
 
     @Test
@@ -24,6 +25,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Check Online Consultation link")
     void checkOnlineConsultationLink() {
         mainPage.clickOnlineConsultation();
+        onlineConsultationPage.checkOnlineConsultationPageOpened();
     }
 
     @Test
@@ -31,6 +33,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Check Diagnostics link")
     void checkDiagnosticsLink() {
         mainPage.clickDiagnostics();
+        diagnosticsPage.checkDiagnosticsPageOpened();
     }
 }
 

@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class DiagnosticsPage {
     String diagnosticsPage = "https://diagnostica.docdoc.ru/";
     SelenideElement
+            diagnosticsPageElementToCheck = $(".search_form"),
             mainDiagnosticsList = $(".spec_list.diagnostic-top-list"),
             currentCityBlock = $(".about_list_short"),
             cityChoiceBlock = $("#ChangeCityBlock"),
@@ -31,6 +32,13 @@ public class DiagnosticsPage {
         open(diagnosticsPage);
         mainDiagnosticsList.shouldHave(text("УЗИ"));
         currentCityBlock.shouldHave(text("в Москве"));
+
+        return this;
+    }
+
+    public DiagnosticsPage checkDiagnosticsPageOpened() {
+        diagnosticsPageElementToCheck.shouldHave(text("Все диагностики"));
+
         return this;
     }
 

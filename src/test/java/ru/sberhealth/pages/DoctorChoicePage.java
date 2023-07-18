@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class DoctorChoicePage {
     String doctorChoicePage = "https://docdoc.ru/doctor";
     SelenideElement
+            doctorChoicePageElementToCheck = $("[data-test-id='search-form-layout']"),
             wrongCity = $(".Popover__footer_25aR").$(byText("Нет, не он")),
             listOfCities = $(".CitySelectModal__cities-wrapper_1BfH"),
             searchDoctorInput = $("[data-test-id='search_input']"),
@@ -27,6 +28,12 @@ public class DoctorChoicePage {
 
     public DoctorChoicePage openDoctorChoicePage() {
         open(doctorChoicePage);
+
+        return this;
+    }
+
+    public DoctorChoicePage checkDoctorChoicePageOpened() {
+        doctorChoicePageElementToCheck.shouldHave(text("Запишитесь на приём к врачу онлайн"));
 
         return this;
     }

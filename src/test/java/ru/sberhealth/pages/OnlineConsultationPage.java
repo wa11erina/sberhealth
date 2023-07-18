@@ -11,6 +11,7 @@ public class OnlineConsultationPage {
 
     String onlineConsultationPage = "https://lk.sberhealth.ru/catalog-products";
     SelenideElement
+            onlineConsultationPageElementToCheck = $("h4"),
             headerLinks = $(".the-header__links"),
             urgentConsultationPage = $("[data-testid='urgent-consultations-block-wrapper']"),
             therapistLink = $("[data-testid='urgent-consultations-block-container']").$(byText("Терапевт")),
@@ -26,6 +27,12 @@ public class OnlineConsultationPage {
 
     public OnlineConsultationPage openOnlineConsultationPage() {
         open(onlineConsultationPage);
+
+        return this;
+    }
+
+    public OnlineConsultationPage checkOnlineConsultationPageOpened() {
+        onlineConsultationPageElementToCheck.shouldHave(text("Срочные консультации"));
 
         return this;
     }
