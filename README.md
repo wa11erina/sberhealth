@@ -112,7 +112,7 @@ ${TASK}
 ____
 
 <a id="allure"></a>
-> ## <img alt="Allure" height="25" src="media/logos/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [Report](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/53/allure/)</a>
+> ## <img alt="Allure" height="25" src="media/logos/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [Report](https://jenkins.autotests.cloud/job/belova_qa_guru_20_sberhealth/57/allure/)</a>
 
 ### Основная страница отчёта
 
@@ -139,7 +139,7 @@ ____
 ____
 
 <a id="allure-testops"></a>
-> ## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/27306">Allure TestOps</a>
+> ## <img src="media/logos/Allure_TO.svg" title="Allure TestOps" width="4%"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/27315">Allure TestOps</a>
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
